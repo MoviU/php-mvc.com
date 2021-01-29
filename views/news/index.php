@@ -7,8 +7,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
     <body>
-        <div class="col">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <?php foreach ($newsList as $newsItem): ?>
+                <div class="col">
               <div class="card mb-4 shadow-sm">
               <div class="card-header">
                 <h4 class="my-0 fw-normal"><?=$newsItem['title']?></h4>
@@ -22,7 +23,8 @@
                 <button type="button" class="w-100 btn btn-lg btn-outline-primary">Читать: <?=$newsItem['title']?></button></a>
               </div>
             </div>
-            <?php endforeach; ?>
             </div>
+            <?php endforeach; ?>
+              </div>
     </body>
 </html>
